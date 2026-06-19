@@ -1,38 +1,25 @@
-# 🛠️ Advanced Computer Vision & Image Processing Toolbox
+# 🪪 Smart ANPR & Access Control Security System
 
-A comprehensive, production-ready suite of desktop applications and utilities built using Python, **OpenCV**, **NumPy**, and **Matplotlib**. This toolbox encapsulates object-oriented (OOP) engineering solutions for image manipulation, data analytics, and digital forensics.
+An advanced Automatic Number Plate Recognition (ANPR) and Smart Gate Access Controller built using Python, **OpenCV**, **NumPy**, and **Tesseract OCR**. This utility extracts vehicular identity markers and evaluates them against custom Access Control Lists (ACL) in real-time.
 
----
+## 🚀 Key Innovation Upgrades
+- **Access Control Layer (ACL):** Upgraded from a simple text scanner into an active security decision engine equipped with `Authorized` and `Blacklisted` plate telemetry logic.
+- **SIEM Style Auditing Logs:** Automatically tracks and appends vehicle plate readings, millisecond-precise timestamps, and gate status reports into an immutable tracking file (`access_logs.txt`).
+- **Adaptive Geometrical Approximation:** Leverages `cv2.approxPolyDP` polygonal bounding checks to isolate quadrilateral shapes matching standard plate aspect ratios under dynamic lighting conditions.
+- **Fault-Tolerant Input Pipe:** Gracefully prevents thread termination when dealing with non-compliant text arrays or empty string frames.
 
-## 🧰 Modules Inside the Toolbox
-
-### 1. Pro Color Palette Designer (`pro-color-palette-designer/`)
-An interactive UI/UX tool that maps real-time hardware-level RGB trackbar inputs onto a dynamic rendering canvas, converting live bitstreams into web-ready Hexadecimal (`#RRGGBB`) color strings.
-
-### 2. Smart Aspect-Ratio Resizer (`smart-image-resizer/`)
-A mathematical scaling utility that resizes target images based on strict layout constraints (width-driven or height-driven) while preserving their native aspect ratios to protect against pixel stretching.
-
-### 3. Image Forensic & Tamper Analyzer (`image-forensic-analyzer/`)
-A pixel-by-pixel differential analyzer that computes localized absolute errors (`cv2.absdiff`) between two images. It programmatically generates binary masks and high-contrast red forensic heatmaps to pinpoint altered regions, calculating a precise similarity score down to 4 decimal places.
-
-### 4. Image Intensity & Exposure Analyzer (`image-exposure-analyzer/`)
-A high-fidelity data visualization tool that maps discrete RGB channels directly onto individual color-coded histogram curves, using grayscale luminance evaluations to programmatically diagnose `Underexposed` or `Overexposed` artifacts.
-
----
-
-## 💻 Tech Stack & Dependencies
+## 💻 Tech Stack
 - **Language:** Python 3
-- **Libraries:** OpenCV (`opencv-python`), NumPy (`numpy`), Matplotlib (`matplotlib`)
+- **Frameworks:** OpenCV, Pytesseract (OCR Engine), NumPy, Imutils
 
-## 🛠️ Global Installation & Setup
+## 🛠️ Installation & System Prerequisites
 
-1. Install all structural requirements in one command:
+1. Ensure the Google Tesseract OCR engine binary is installed on your OS platform, then install the Python libraries:
 ```bash
-pip install opencv-python numpy matplotlib
+pip install opencv-python pytesseract numpy imutils
 ```
 
-2. Navigate into any project directory and spin up the desired utility:
+2. Spin up the automated security gateway monitor:
 ```bash
-cd pro-color-palette-designer
-python designer.py
+python anpr_system.py
 ```
